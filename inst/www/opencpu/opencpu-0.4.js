@@ -18,7 +18,11 @@
   //global variable 
   var r_cors = false;
   var r_path = document.createElement('a');
-  r_path.href = "../R";
+
+  //update by zsj
+  //r_path.href = "../R";
+  r_path.href = "../../ocpu/user/lily/library/zsjapp/R";
+  console.log("zsj's r_path.href="+r_path.href);
 
 
   //new Session()
@@ -133,6 +137,10 @@
     settings.type = settings.type || "POST";
     settings.data = settings.data || {};
     settings.dataType = settings.dataType || "text";
+
+    //add by zsj
+    console.log("zsj's settings.url="+settings.url);
+   
     
     //ajax call
     var jqxhr = $.ajax(settings).done(function(){
